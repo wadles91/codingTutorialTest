@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Post using AJAX</title>
+  <!--  <link rel="stylesheet" href="style.css">  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+    </script>
+    <script>
+      $(document).ready(function(){
+
+        $("input").keyup(function(){
+          var name = $("input").val();
+          $.post("suggestions.php", {
+            suggestion: name
+          }, function(data, status){
+            $("#test").html(data);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+    <input type="text" name="name">
+    <p id="test"></p>
+
+  </body>
+</html>

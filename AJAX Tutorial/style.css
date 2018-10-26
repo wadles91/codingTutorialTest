@@ -1,0 +1,28 @@
+body{
+  background-color: #E7E7E7
+
+}
+
+div {
+  background-color: white;
+  min-height: 40px;
+  border-radius: 5px;
+  margin: 10px 10px 10px 10px;
+  width: 50%;
+  min-width: 500px;
+  font-family: "Verdana, Geneva, sans-serif";
+  font-size: 20px;
+  padding: 10px 10px;
+}
+button {
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 10px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}

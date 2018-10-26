@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Load data from a server.</title>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+    <script>
+      $(document).ready(function(){
+        $("#btn").click(function(){
+          $("#test").load("data.txt", {
+            Name: "David",
+            Lastname: "Wadley"
+          }, function(){
+            alert("Hi there!");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+    <div id="test">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.<p>
+    </div>
+    <button id="btn" type="button" name="button">Click to use AJAX!</button>
+
+  </body>
+</html>
